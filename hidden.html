@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Program</title>
+        
+           </head>
+ 
+<body>
+    <h1>HIDDEN THINGS BY BALA SHANKAR MALLADI</h1>
+<h2>Getting input</h2>
+
+<form>
+    <label for="secret">Enter the secret word </label>
+    <input type ="password" id="secret" name="secret" min=10 max=50 step=2> <br>
+
+    <label for="guess">Check the Guess</label>
+    <input type ="text" id="guess" name="guess" autofocus> <br>
+
+    <input type="button" onclick="processGuess()" value="Check the guess">
+</form>
+<p id="result">Guess the password </p>
+
+<script> 
+var correct=0;
+var wrong =0;
+out = document.getElementById("result")
+function processGuess() {
+    var word = document.getElementById("secret").value;
+    var guess = document.getElementById("guess").value;
+    confirmed = confirm("Are these the values? "+word+" and "+guess)
+    if(word==guess){
+        correct = correct + 1;
+        alert("Congratulations");
+        out.innerHTML = "Congratulations"
+    } else {
+        wrong = wrong + 1;
+        alert("Sorry");
+        out.innerHTML = "Sorry"
+    }
+}
+</script>
+
+</body>
+</html> 
