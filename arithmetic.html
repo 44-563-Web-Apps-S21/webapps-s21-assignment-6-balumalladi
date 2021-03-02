@@ -36,6 +36,51 @@ function permutations(){
     
 }
 </script>
+<form>
+    <input type="radio" id="plus" name="plus" value="plus">
+    <label for="plus">+</label></br>
+  
+    <input type="radio" id="minus" name="minus" value="minus">
+    <label for="minus">-</label></br>
+
+    <input type="radio" id="times" name="times" value="times">
+    <label for="times">*</label></br>
+
+    <input type="radio" id="divide" name="divide" value="divide">
+    <label for="divide">/</label></br>
+  
+
+    <input type="button" onclick="processRadio()" value="Result">
+  </form>
+
+<p id="radio_result">Radio Result</p>
+<script>
+    function processRadio(){
+    console.log("Getting form values")
+     first=document.getElementById("form1_age").value
+     second=document.getElementById("form1_nick").value
+
+     first=parseInt(first);
+    second=parseInt(second);
+
+     if(document.getElementById("plus").checked){
+         first=first+second;
+     }
+     else if(document.getElementById("minus").checked){
+         first=first-second;
+     }
+     else if(document.getElementById("times").checked){
+         first=first*second;
+     }
+     else{
+         first=first/second;
+     }
+     
+     out=document.getElementById("radio_result")
+     out.innerHTML=first
+
+    }
+</script>
 
 </body>
 </html> 
