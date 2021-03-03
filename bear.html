@@ -5,6 +5,7 @@
     </HEAD>
     <BODY>
         <h1>Bala Shankar Malladi builds a bear</h1>
+    <form>
     <input type="checkbox" id="hat" value="hat">
     <lable for="hat">Hat</lable></br>
     <input type="checkbox" id="scarf" value="scarf">
@@ -12,6 +13,14 @@
     <input type="checkbox" id="shirt" value="shirt">
     <lable for="shirt">Shirt</lable></br>
     <input type="button" onclick="startBear()" value="Start a bear">
+    </form>
+    <form>
+        <input type="text" id="box1" name="box1" value="color">
+        <lable for="box1">Enter a property</lable>
+        <input type="text" id="box2" name="box2" value=>
+        <lable for="box2">Enter a value</lable>
+        <input type="button" onClick="updatebear()" value="Update the bear">
+    </form>
     <p id="result">Result will be displayed here</p>
     <script>
         var my_bear={};
@@ -36,6 +45,15 @@
     out.innerHTML=my_bear
     my_bear= JSON.parse(my_bear)
         }
+        function updatebear(){
+            var property=document.getElementById("box1").value
+            var value=document.getElementById("box2").value
+            my_bear[values]=property;
+            out = document.getElementById("result")
+            out.innerHTML=my_bear
+
+        }
+
     </script> 
     </BODY>
      
