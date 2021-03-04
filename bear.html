@@ -2,10 +2,31 @@
 <HTML>
     <HEAD>
         <title>Check boxes</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            h1 {
+                   text-shadow: 0 0 3px #00ff88, 0 0 5px #c8ff00;
+              }
+              .button {border-radius: 50%; border: 2px solid #4CAF50;}
+              .form{
+            background-color:darkgray;
+        }
+        .abc{
+            background-color:darkslateblue;
+        }
+
+         </style>
+        <link="stylesheet" href="style.css">
+       
     </HEAD>
     <BODY>
         <h1>Bala Shankar Malladi builds a bear</h1>
-    <form>
+    <form class="form">
     <input type="checkbox" id="hat" name="hat" value="hat">
     <lable for="hat">Hat</lable></br>
 
@@ -15,20 +36,20 @@
     <input type="checkbox" id="shirt" name="shirt" value="shirt">
     <lable for="shirt">Shirt</lable></br>
 
-    <input type="button" onclick="startBear()" value="Start a bear">
+    <input class="button" type="button" onclick="startBear()" value="Start a bear">
     </form>
-    <p id="result">Result</p>
+    <p id="result" class="abc">Result</p>
 
-    <form>
+    <form class="form">
         <input type="text" id="property" name="property" value="color">
         <lable for="property">Enter a property</lable><br>
 
         <input type="text" id="value" name="value" >
         <lable for="value">Enter a value</lable><br>
 
-        <input type="button" onClick="updatebear()" value="Update the bear">
+        <input class="button" type="button" onClick="updatebear()" value="Update the bear">
     </form>
-    <p id="result1">Result will be displayed here</p>
+    <p id="result1" class="abc">Result will be displayed here</p>
 
     <script>
 
@@ -64,7 +85,7 @@
             var values=document.getElementById("value").value
             my_bear[properties]=values;
             out = document.getElementById("result1")
-            my_bear=JSON.stringify(my_bear);
+            my_bear=JSON.stringify(my_bear)
             out.innerHTML=my_bear
             my_bears=JSON.parse(my_bear)
         }
